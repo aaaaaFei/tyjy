@@ -11,7 +11,7 @@ var infoSckema = new mongoose.Schema({
 })
 
 
-mongoose.connect('mongodb://154.8.170.176:27017/djb',{ useNewUrlParser: true },function(err){
+mongoose.connect('mongodb://127.0.0.1:27017/djb',{ useNewUrlParser: true },function(err){
     if(err){
         console.log(err)
     }else{
