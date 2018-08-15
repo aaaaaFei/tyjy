@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>天艺教育周年庆记录表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel='stylesheet' href="/stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/jquery.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
+    <!-- Latest compiled and minified Locales -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
+</head>
+<body class="padding20">
+    <h3 class="center">天艺教育周年庆记录表</h3>
+    <!--<form class="row">-->
+        <!--<div class="col-lg-6"></div>-->
+        <!--<div class="col-lg-6">-->
+            <!--<div class="input-group">-->
+                <!--<input type="text" name="searchText" id="searchText" class="form-control">-->
+                <!--<div class="input-group-btn">-->
+                    <!--&lt;!&ndash;<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>&ndash;&gt;-->
+                    <!--<select name="searchType" id="searchType">-->
+                        <!--<option value="1">姓名</option>-->
+                        <!--<option value="2">性别</option>-->
+                        <!--<option value="3">电话</option>-->
+                        <!--<option value="4">兴趣</option>-->
+                    <!--</select>-->
+                    <!--<button type="button" id="search" class="btn btn-primary">搜索</button>-->
+                <!--</div>&lt;!&ndash; /btn-group &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;-->
+    <!--</form>-->
+<table class="table table-hover" id="table"  data-strict-search="true" data-search-on-enter-key="true" data-search="true">
+
+</table>
+<input type="hidden" id="list"  value=<%=JSON.stringify(list)%>>
+</body>
+</html>
+<script>
+    var data = JSON.parse($('#list').val())
+
+    $('#table').bootstrapTable({
+        columns: [{
+            field: 'name',
+            title: '姓名'
+        }, {
+            field: 'sex',
+            title: '性别',
+            formatter:function(index,row){
+                if(row.sex == 'sex1'){
+                    return '男'
+                }else if(row.sex == 'sex2'){
+                    return '女'
+                }
+            }
+        }, {
+            field: 'telNumber',
+            title: '电话'
+        }, {
+            field: 'school',
+            title: '学校'
+        }, {
+            field: 'address',
+            title: '住址'
+        }, {
+            field: 'Interest',
+            title: '兴趣'
+        }],
+        data: data
+    });
+
+
+
+</script>

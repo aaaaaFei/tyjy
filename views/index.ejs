@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>天艺教育周年庆登记表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel='stylesheet' href="/stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+  <form action="/toPost" method="post" class="container-fluid">
+
+    <h4 class="center">天艺教育周年庆登记表</h4>
+    <div class="form-group">
+      <label for="name">姓名</label>
+      <input required  name="name" type="text" class="form-control" id="name" placeholder="姓名">
+    </div>
+    <div class="checkbox">
+      <label for="name">性别</label><br>
+      <label>
+        <input required type="radio" name="sex" id="sex1" value="sex1" checked> 男
+      </label>
+      <label>
+        <input required type="radio" name="sex" id="sex2" value="sex2"> 女
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="telNumber">手机号(父母)</label>
+      <input required type="number" name="telNumber" class="form-control" id="telNumber" placeholder="父母手机号">
+    </div>
+    <div class="form-group">
+      <label for="school">学校</label>
+      <input required type="text" name="school" class="form-control" id="school" placeholder="学校">
+    </div>
+    <div class="form-group">
+      <label for="address">住址</label>
+      <input required type="text" name="address" class="form-control" id="address" placeholder="住址">
+    </div>
+
+    <div class="form-group">
+      <label for="Interest">兴趣</label>
+      <select id="Interest" class="form-control" name="Interest">
+        <option>作文</option>
+        <option>舞蹈</option>
+        <option>数学</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">提交</button>
+  </form>
+  </body>
+</html>
