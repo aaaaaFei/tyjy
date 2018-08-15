@@ -42,7 +42,7 @@
 </body>
 </html>
 <script>
-    if(!$('#list').val()){
+    if($('#list').val() != ''){
         var data = JSON.parse($('#list').val())
     }else{
         var data = ''
