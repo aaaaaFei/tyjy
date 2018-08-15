@@ -42,7 +42,12 @@
 </body>
 </html>
 <script>
-    var data = JSON.parse($('#list').val())
+    if(!$('#list').val()){
+        var data = JSON.parse($('#list').val())
+    }else{
+        var data = ''
+    }
+
 
     $('#table').bootstrapTable({
         columns: [{

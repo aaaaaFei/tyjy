@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node如何访问远程服务器的node
 
 /**
  * Module dependencies.
