@@ -13,7 +13,7 @@ router.post('/toPost', function(req, res, next) {
       doc.save(function(err,doc){
           console.log(doc)
       })
-      res.send('OK')
+      res.send('登记成功')
 });
 
 module.exports = router;
