@@ -7,7 +7,9 @@ var infoSckema = new mongoose.Schema({
     telNumber:'string',
     school:'string',
     address:'string',
-    Interest:'string'
+    Interest:'string',
+    person:'string',
+    grade:'string'
 })
 
 
